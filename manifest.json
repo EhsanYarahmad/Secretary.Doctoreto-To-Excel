@@ -2,9 +2,9 @@
   "manifest_version": 3,
   "name": "Secretary.Doctoreto To Excel",
   "version": "2.7",
-  "description": "این افزونه اطلاعات جدول‌های صفحات وب سایت منشی دکترتو را استخراج کرده و به فایل اکسل تبدیل می‌کند.",
+  "description": "این افزونه اطلاعات نوبت های سایت منشی دکترتو را استخراج کرده و به فایل اکسل تبدیل می‌کند.",
   "permissions": ["activeTab", "scripting", "downloads", "storage"],
-  "host_permissions": ["<all_urls>"],
+  "host_permissions": ["https://secretary.doctoreto.com/*"],
   "background": {
     "service_worker": "background.js"
   },
@@ -18,7 +18,7 @@
 },
 "content_scripts": [
   {
-    "matches": ["<all_urls>"],
+    "matches": ["https://secretary.doctoreto.com/*"],
     "js": ["content.js"],
     "run_at": "document_idle"
   }
